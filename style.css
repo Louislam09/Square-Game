@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+	background: #030813;
+	font-family: monospace;
+}
+
+.container {
+	position: relative;
+	/* top: 5vh; */
+	width: 404px;
+	height: 600px;
+	background: black;
+	color: white;
+	user-select: none;
+}
+
+span {
+	position: absolute;
+	left: 300px;
+	top: 0px;
+	width: 100px;
+	height: 150px;
+	background-color: lightcoral;
+}
+b {
+	position: absolute;
+	top: 10%;
+	left: 7%;
+	background: transparent;
+	font-size: 75px;
+}
+.gMsg {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	background: transparent;
+	font-size: 75px;
+}
+button {
+	position: absolute;
+	top: 55%;
+	left: 30%;
+	width: 140px;
+	height: 50px;
+	font-size: 35px;
+	color: white;
+	background: transparent;
+	border-radius: 5px;
+	font-style: bold;
+	animation: borderRadius 2s linear infinite;
+}
+button:hover {
+	background-color: white;
+	color: black;
+	font-style: bold;
+}
+
+img {
+	position: absolute;
+	width: 150px;
+	top: 15%;
+	left: 30%;
+	background: transparent;
+	animation: girar 1s alternate-reverse infinite;
+}
+.main-menu {
+	position: relative;
+	width: 404px;
+	height: 600px;
+	user-select: none;
+	z-index: 20;
+}
+
+.main-menu .game-title {
+	position: absolute;
+	top: 25%;
+	left: 4%;
+	font-size: 55px;
+}
+
+.timer {
+	position: absolute;
+	color: white;
+	top: 10px;
+	left: 0px;
+	font-size: 25px;
+	background: transparent;
+}
+.countdown {
+	position: absolute;
+	color: white;
+	top: 200px;
+	left: 190px;
+	font-size: 75px;
+	color: red;
+	background: transparent;
+	animation: blink 1s linear infinite;
+}
+.life {
+	position: absolute;
+	color: white;
+	top: 10px;
+	left: 290px;
+	font-size: 25px;
+	background: transparent;
+}
+
+@keyframes blink {
+	0% {
+		color: white;
+	}
+	100% {
+		color: black;
+	}
+}
+@keyframes girar {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes borderRadius {
+	0% {
+		background-image: repeating-linear-gradient(rgba(255, 0, 0, 0.329), purple);
+		border-top: 1px solid purple;
+		border-left: 1px solid red;
+	}
+	100% {
+		background-image: repeating-linear-gradient(rgba(128, 0, 128, 0.349), red);
+		border-bottom: 1px solid red;
+		border-right: 1px solid purple;
+	}
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 768px) {
+	.container {
+		position: relative;
+		max-width: 404px;
+		min-height: 600px;
+		background: black;
+		color: white;
+		left: 0%;
+		top: 0%;
+		user-select: none;
+	}
+}
