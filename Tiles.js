@@ -21,7 +21,7 @@ var colorArray = [
 ];
 var countback = 4;
 var pause = false;
-var speed = 10;
+var speed = 5;
 var score = 0;
 var heart = [ '❤️', '❤️', '❤️' ];
 
@@ -205,7 +205,7 @@ function RUN() {
 		if (pause === true) {
 			UpdateTile();
 			timeScore();
-			NextLevel();
+			// NextLevel();
 		}
 	} catch (error) {
 		console.log(error);
