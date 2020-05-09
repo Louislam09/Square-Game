@@ -33,7 +33,7 @@ b {
 	background: transparent;
 	font-size: 75px;
 }
-.gMsg {
+.gameover-msg {
 	position: absolute;
 	top: 40%;
 	left: 5%;
@@ -139,14 +139,21 @@ img {
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 768px) {
+	html {
+		height: 100%;
+		background: #030813;
+		font-family: monospace;
+		zoom: 86%;
+	}
+
 	.container {
-		position: relative;
+		position: absolute;
 		max-width: 404px;
 		min-height: 600px;
 		background: black;
 		color: white;
-		left: 0%;
-		top: 0%;
+		left: 2%;
+		top: 10%;
 		user-select: none;
 	}
 }

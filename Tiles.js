@@ -19,9 +19,9 @@ var colorArray = [
 	'#D9A679',
 	'#8C4C46'
 ];
-var countback = 5;
+var countback = 4;
 var pause = false;
-var speed = 5;
+var speed = 10;
 var score = 0;
 var heart = [ '❤️', '❤️', '❤️' ];
 
@@ -90,7 +90,7 @@ function clicked(e) {
 	tile.remove();
 
 	// Sounds section
-	let index = Math.floor(Math.random() * 6);
+	// let index = Math.floor(Math.random() * 6);
 	SOUNDS[2].currentTime = 0;
 	SOUNDS[2].play();
 }
@@ -123,7 +123,7 @@ function Gameover() {
 	img.src = 'img/crying.webp';
 
 	let gameoverMsg = document.createElement('h1');
-	gameoverMsg.classList = 'gMsg';
+	gameoverMsg.classList = 'gameover-msg';
 	gameoverMsg.innerText = 'Perdiste!';
 
 	let btn = document.createElement('button');
@@ -165,10 +165,6 @@ function Countdown() {
 
 function NextLevel() {
 	if (Math.floor(score) === 50) {
-		speed = 5;
-	} else if (Math.floor(score) === 100) {
-		speed = 6;
-	} else if (Math.floor(score) === 160) {
 		speed = 10;
 	}
 }
